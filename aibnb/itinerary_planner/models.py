@@ -10,7 +10,7 @@ class Preference(models.Model):
     guests = models.IntegerField()
 
     def __str__(self):
-        return "{} -{}, {}".format(self.user, self.city, self.country)
+        return "{} -{}, {}, {}".format(self.user, self.location, self.budget, self.season)
 
 class Itinerary(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
