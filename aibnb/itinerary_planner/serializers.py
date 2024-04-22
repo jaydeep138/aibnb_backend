@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from .models import Preference
+from .models import Preference, Review
 
 class PreferenceSerializer(ModelSerializer):
     class Meta:
@@ -8,4 +8,11 @@ class PreferenceSerializer(ModelSerializer):
         fields = (
             'id', 'user', 'location', 'budget', 'season', 'date',
             'guests'
+        )
+
+class ReviewSerializer(ModelSerializer):
+    class Meta:
+        model = Review
+        fields = (
+            'id', 'user', 'itinerary', 'rating', 'review', 'date'
         )

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework',
     'rest_framework.authtoken',
-    'database',
     'itinerary_planner',
 ]
 
